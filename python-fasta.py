@@ -9,6 +9,9 @@ def read_fasta(filename):
             sequence = sequence + line
     f.close()
     return sequence
+if len(sys.argv) <2:
+	print("Need to provide filename as argument")
+	exit(1)
 
 print(read_fasta(sys.argv[1]))
 
